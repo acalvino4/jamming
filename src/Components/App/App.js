@@ -1,10 +1,27 @@
 import React from 'react';
 import './App.css';
-import SearchBar from '../SearchBar/SearchBar.js';
-import SearchResults from '../SearchResults/SearchResults.js';
-import Playlist from '../Playlist/Playlist.js';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      searchResults: [
+        {name: 'a', artist: 'a', album: 'a', id: '1'},
+        {name: 'b', artist: 'b', album: 'b', id: '2'},
+        {name: 'c', artist: 'c', album: 'c', id: '3'}
+      ],
+      playlistName: 'a list',
+      playlistTracks: [
+        {name: 'a', artist: 'a', album: 'a', id: '1'},
+        {name: 'd', artist: 'd', album: 'd', id: '4'},
+      ]
+    }
+  }
   
   render() {
     return (
@@ -13,8 +30,11 @@ class App extends React.Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <SearchResults />
-            <Playlist />
+            <SearchResults searchResults={this.state.searchResults}/>
+            <Playlist 
+              playlistName={this.state.playlistName}
+              playlistTracks={this.state.playlistTracks}
+            />
           </div>
         </div>
       </div>
