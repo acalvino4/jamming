@@ -29,6 +29,7 @@ const Spotify = {
     },
 
     search(term) {
+        // eslint-disable-next-line no-self-assign
         const accessToken = Spotify.getAccessToken(term=term);
         const headers = {Authorization: `Bearer ${accessToken}`};
         const params = new URLSearchParams({
