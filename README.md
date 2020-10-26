@@ -1,3 +1,10 @@
+# Jamming
+
+View this project live at https://jamming-acalvino4.surge.sh
+
+This project is a web app I built to strengthen my knowledge of React. It uses class-based components, and interfaces with the spotify API to search for music and create playlists with the search results. It also made me aware of free easy-to-use static hosting services like [surge](https://surge.sh) and gave me experience deploying to it.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
